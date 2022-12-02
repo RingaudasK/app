@@ -2,34 +2,32 @@
 import './App.scss';
 
 
-// import Zebrai from './Components/Zebrai.jsx';
+import Joke from './Components/Joke.jsx';
 
 
 function App() {
     
-   
+fetch('https://in3.dev/knygos/')
 
 
 
-  return (
+
+return (
     <div className="App">
         <div className="App-header">
-        
-          <div>
-            "aaaaa"
-          </div>
-
-        
- 
+            </div> 
+            
+            <ul>
+                {
+                    Joke?.map(b => <li key={b.id}>
+                        <img src={b.img} alt="book"></img>
+                        <h2>{b.title}</h2>
+                        <h2>{b.price}</h2>
+                    </li>)
+                  
+                }
+            </ul>
         </div>
-    </div>
-);
-}
-
- 
-
- 
-
- 
-
+)
+};
 export default App;
